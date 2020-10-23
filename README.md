@@ -1,7 +1,7 @@
 # Note_Taker
 
 ## Description
-This application can be used to write, save, and delete notes. This application uses backend and save and retrieve note data from a JSON file. The user will be able to click add note and will enter a title and 
+This application can be used to write, save, and delete notes. This application uses a backend and saves and retrieves note data from a JSON file. The user will be able to click add note and will enter a Note title and subsequent note. Then click the save icon to save the note on the left side. If the user wants to delete an old note they just have to click the corresponding trash can icon.
 
 ## Table of Content
 

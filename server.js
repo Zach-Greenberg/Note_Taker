@@ -9,11 +9,13 @@ const PORT = process.env.PORT || 8000;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static(_dirname));
+app.use(express.static('public'));
 
-//routing
+//calls for routes
+require('./routes/apiRoutes')(app);
+require('./routes/htmlRoutes')(app);
 
-
+//listen check
 app.listen(PORT, function() {
     console.log("App listening on PORT: " + PORT);
 });

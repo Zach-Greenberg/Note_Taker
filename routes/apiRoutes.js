@@ -36,6 +36,23 @@ module.exports = function(app) {
       db = addNote(db);
       //save note to json file
       writeNote(db);
+      //reformated html with new note
       res.json(newNote);
+    });
+
+    //API DELETE
+    app.delete("/api/notes/:id", function(req, res) {
+        
+        //define delete note by id
+        const deletedNoteID = req.params.id;
+        //splice adds or removes items to/from an array *w3schools
+        //id -1 due to array starting at 0 and id starting at 1
+        const deletedNote = db.splice(deletedNoteID-1, 1);
+        //set note in array
+        db = addNote(db);
+        //save note to json file
+        writeNote(db);
+        //reformat html with deleted note
+        res.json(deletedNote);
     });
   };
